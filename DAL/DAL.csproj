@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="ConexionBDRepository.cs" />
     <Compile Include="ConexionManager.cs" />
+    <Compile Include="ManejoArchivoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

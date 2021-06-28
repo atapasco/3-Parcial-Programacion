@@ -10,3 +10,4 @@ insert into Productos (Codigo,Nombre,Valor) values('P001','juego de sala',100000
 insert into Productos (Codigo,Nombre,Valor) values('P002','Juego de Comedor',1200000);
 insert into Productos (Codigo,Nombre,Valor) values('P003','Nevera',800000);
 insert into Productos (Codigo,Nombre,Valor) values('P004','Estufa',500000);
+
