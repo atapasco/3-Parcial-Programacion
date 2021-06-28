@@ -31,13 +31,15 @@ namespace Presentacion
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cargarArchivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cargarArchivoToolStripMenuItem});
+            this.cargarArchivoToolStripMenuItem,
+            this.consultaVentasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -50,6 +52,13 @@ namespace Presentacion
             this.cargarArchivoToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
             this.cargarArchivoToolStripMenuItem.Text = "Cargar Archivo";
             this.cargarArchivoToolStripMenuItem.Click += new System.EventHandler(this.cargarArchivoToolStripMenuItem_Click);
+            // 
+            // consultaVentasToolStripMenuItem
+            // 
+            this.consultaVentasToolStripMenuItem.Name = "consultaVentasToolStripMenuItem";
+            this.consultaVentasToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.consultaVentasToolStripMenuItem.Text = "consulta ventas";
+            this.consultaVentasToolStripMenuItem.Click += new System.EventHandler(this.consultaVentasToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -73,6 +82,7 @@ namespace Presentacion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cargarArchivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaVentasToolStripMenuItem;
     }
 }
 

@@ -31,5 +31,12 @@ namespace Presentacion
             form2.MdiParent = this;
             form2.Show();
         }
+
+        private void consultaVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.MdiParent = this;
+            form3.Show();
+        }
     }
 }

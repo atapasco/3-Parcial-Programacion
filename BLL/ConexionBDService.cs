@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DAL;
+﻿using DAL;
 using Entity;
+using System;
+using System.Collections.Generic;
 
 namespace BLL
 {
@@ -88,6 +85,24 @@ namespace BLL
             {
                 productoTryCatch = new ProductoTryCatch($"ERROR: {e}");
                 return productoTryCatch;
+            }
+            finally
+            {
+                conexionManager.Close();
+            }
+        }
+
+        public List<Venta> ConsultarVentas()
+        {
+            try
+            {
+                conexionManager.Open();
+
+                return conexionBDRepository.ConsultarVentas();
+            }
+            catch (Exception e)
+            {
+                return null;
             }
             finally
             {

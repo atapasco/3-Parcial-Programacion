@@ -90,5 +90,29 @@ namespace DAL
                 comando.ExecuteNonQuery();
             }
         }
+
+        public List<Venta> ConsultarVentas()
+        {
+            List<Venta> ventas = new List<Venta>();
+            using (var comando = sqlConnection.CreateCommand())
+            {
+                comando.CommandText = "SELECT idSede, codigoProducto, valor FROM Ventas";
+                var lector = comando.ExecuteReader();
+                if (lector.HasRows)
+                {
+                    while (lector.Read())
+                    {
+                        Venta venta = new Venta();
+                        venta.IdSede = lector.GetInt32(0);
+                        venta.CodigoProducto = lector.GetString(1);
+                        venta.Valor = lector.GetDouble(2);
+
+                        ventas.Add(venta);
+                    }
+                }
+                lector.Close();
+            }
+            return ventas;
+        }
     }
 }
